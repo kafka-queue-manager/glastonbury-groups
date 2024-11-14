@@ -36,6 +36,14 @@ cat <<EOF
             // Update the bookmarklet link
             document.getElementById('bookmarkletLink_' + groupIndex).href = "javascript:(function()%7B" + encodeURIComponent(bookmarkletCode) + "%7D)()";
         }
+
+        // Initialize the bookmarklet link with the first member as lead booker
+        window.onload = function() {
+            const groupCount = document.querySelectorAll('[id^="leadBooker_"]').length;
+            for (let i = 1; i <= groupCount; i++) {
+                updateBookmarklet(i);
+            }
+        }
     </script>
 </head>
 <body>
@@ -62,8 +70,8 @@ jq -c '.groups[]' "$json_file" | while IFS= read -r group; do
             <select id="leadBooker_$groupIndex" onchange="updateBookmarklet($groupIndex)">
 EOF
 
-    # Generate options for the dropdown
-    echo "$members" | jq -r '. | to_entries[] | "<option value=\"" + (.key | tostring) + "\">" + .value.name + "</option>"'
+    # Generate options for the dropdown, with the first option preselected
+    echo "$members" | jq -r '. | to_entries[] | "<option value=\"" + (.key | tostring) + "\"" + (if .key == 0 then " selected" else "" end) + ">" + .value.name + "</option>"'
 
     # Closing HTML for the dropdown and bookmarklet link
     cat <<EOF

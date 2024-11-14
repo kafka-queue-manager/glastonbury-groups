@@ -23,6 +23,14 @@
             // Update the bookmarklet link
             document.getElementById('bookmarkletLink_' + groupIndex).href = "javascript:(function()%7B" + encodeURIComponent(bookmarkletCode) + "%7D)()";
         }
+
+        // Initialize the bookmarklet link with the first member as lead booker
+        window.onload = function() {
+            const groupCount = document.querySelectorAll('[id^="leadBooker_"]').length;
+            for (let i = 1; i <= groupCount; i++) {
+                updateBookmarklet(i);
+            }
+        }
     </script>
 </head>
 <body>
@@ -33,7 +41,7 @@
             <br>
             <label for="leadBooker_1">Select Lead Booker:</label>
             <select id="leadBooker_1" onchange="updateBookmarklet(1)">
-<option value="0">Jarlath McGeary</option>
+<option value="0" selected>Jarlath McGeary</option>
 <option value="1">Charles Jawor</option>
 <option value="2">Leon Aves</option>
 <option value="3">Alexander Bottomley</option>
@@ -51,7 +59,7 @@
             <br>
             <label for="leadBooker_2">Select Lead Booker:</label>
             <select id="leadBooker_2" onchange="updateBookmarklet(2)">
-<option value="0">Finn Merlett</option>
+<option value="0" selected>Finn Merlett</option>
 <option value="1">Ross More</option>
 <option value="2">Jamie Colclough</option>
 <option value="3">Toby Felton</option>
@@ -69,7 +77,7 @@
             <br>
             <label for="leadBooker_3">Select Lead Booker:</label>
             <select id="leadBooker_3" onchange="updateBookmarklet(3)">
-<option value="0">Jacob Calvo Penfold</option>
+<option value="0" selected>Jacob Calvo Penfold</option>
 <option value="1">Helen McFadden</option>
 <option value="2">Ryan Jones</option>
 <option value="3">Sophie Gleghorn</option>
@@ -87,7 +95,7 @@
             <br>
             <label for="leadBooker_4">Select Lead Booker:</label>
             <select id="leadBooker_4" onchange="updateBookmarklet(4)">
-<option value="0">Joel Cox</option>
+<option value="0" selected>Joel Cox</option>
 <option value="1">Georgia Rush</option>
 <option value="2">Georgia Dirkis</option>
 <option value="3">Suzanne Stephen</option>
@@ -105,7 +113,7 @@
             <br>
             <label for="leadBooker_5">Select Lead Booker:</label>
             <select id="leadBooker_5" onchange="updateBookmarklet(5)">
-<option value="0">Matthew Potter</option>
+<option value="0" selected>Matthew Potter</option>
 <option value="1">Matthew Hartley</option>
 <option value="2">Andrey Medvedev</option>
 <option value="3">George Hood</option>
@@ -123,7 +131,7 @@
             <br>
             <label for="leadBooker_6">Select Lead Booker:</label>
             <select id="leadBooker_6" onchange="updateBookmarklet(6)">
-<option value="0">Rachel Shore</option>
+<option value="0" selected>Rachel Shore</option>
 <option value="1">Hannah Cafe</option>
 <option value="2">Natalia Coe</option>
 <option value="3">Laura Onyon</option>
@@ -141,7 +149,7 @@
             <br>
             <label for="leadBooker_7">Select Lead Booker:</label>
             <select id="leadBooker_7" onchange="updateBookmarklet(7)">
-<option value="0">Ben Brown</option>
+<option value="0" selected>Ben Brown</option>
 <option value="1">Jessica Joel</option>
 <option value="2">Philippe Joffroy</option>
 <option value="3">Georgie Murphy</option>
@@ -159,7 +167,7 @@
             <br>
             <label for="leadBooker_8">Select Lead Booker:</label>
             <select id="leadBooker_8" onchange="updateBookmarklet(8)">
-<option value="0">Siobhan Murray</option>
+<option value="0" selected>Siobhan Murray</option>
 <option value="1">Adam Jaffery-Roberts</option>
 <option value="2">Rebecca Murray</option>
 <option value="3">Elisabeth Vicente</option>
@@ -177,7 +185,7 @@
             <br>
             <label for="leadBooker_9">Select Lead Booker:</label>
             <select id="leadBooker_9" onchange="updateBookmarklet(9)">
-<option value="0">Leyla Lugal</option>
+<option value="0" selected>Leyla Lugal</option>
 <option value="1">Netty Toth</option>
 <option value="2">Andrew Fisher</option>
 <option value="3">Carys Martlew-Cousins</option>
@@ -194,7 +202,7 @@
             <br>
             <label for="leadBooker_10">Select Lead Booker:</label>
             <select id="leadBooker_10" onchange="updateBookmarklet(10)">
-<option value="0">Emiliano Lewis</option>
+<option value="0" selected>Emiliano Lewis</option>
 <option value="1">Mark Lewis</option>
 <option value="2">Leonardo Lewis</option>
 <option value="3">Daher Aden</option>
@@ -211,7 +219,7 @@
             <br>
             <label for="leadBooker_11">Select Lead Booker:</label>
             <select id="leadBooker_11" onchange="updateBookmarklet(11)">
-<option value="0">Charles Whight</option>
+<option value="0" selected>Charles Whight</option>
 <option value="1">Flora Lenon</option>
 <option value="2">Camilla Booth-Clibborn </option>
 <option value="3">Emily Kane</option>
@@ -229,7 +237,7 @@
             <br>
             <label for="leadBooker_12">Select Lead Booker:</label>
             <select id="leadBooker_12" onchange="updateBookmarklet(12)">
-<option value="0">Lawrence Bottomley</option>
+<option value="0" selected>Lawrence Bottomley</option>
 <option value="1">Hannah Long</option>
 <option value="2">Elliott Stuckey</option>
 <option value="3">Emma Savill</option>
@@ -245,7 +253,7 @@
             <br>
             <label for="leadBooker_13">Select Lead Booker:</label>
             <select id="leadBooker_13" onchange="updateBookmarklet(13)">
-<option value="0">Edwin Rosemond</option>
+<option value="0" selected>Edwin Rosemond</option>
 <option value="1">Julianna Lo</option>
 <option value="2">Guillaume Toujas-Bernate</option>
 <option value="3">Eliane Ihling</option>
@@ -263,7 +271,7 @@
             <br>
             <label for="leadBooker_14">Select Lead Booker:</label>
             <select id="leadBooker_14" onchange="updateBookmarklet(14)">
-<option value="0">Jessica Underwood</option>
+<option value="0" selected>Jessica Underwood</option>
 <option value="1">Chris Underwood</option>
 <option value="2">Max Roberts</option>
 <option value="3">Katie Roberts</option>
