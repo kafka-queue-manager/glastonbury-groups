@@ -64,7 +64,7 @@ jq -c '.groups[]' "$json_file" | while IFS= read -r group; do
     # Generate HTML for each group with dropdown for lead booker
     cat <<EOF
         <li>
-            <strong>$groupName</strong> - Location: $groupLocation
+            <strong>$groupName</strong>${groupLocation:+ - Location: $groupLocation}
             <br>
             <label for="leadBooker_$groupIndex">Select Lead Booker:</label>
             <select id="leadBooker_$groupIndex" onchange="updateBookmarklet($groupIndex)">
