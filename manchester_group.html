@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Bookmarklets for Groups</title>
+    <script>
+        function updateBookmarklet(groupIndex) {
+            const leadBookerIndex = document.getElementById('leadBooker_' + groupIndex).value;
+            const groupData = JSON.parse(document.getElementById('groupData_' + groupIndex).textContent);
+
+            // Move the selected lead booker to the start
+            const leadBooker = groupData.members.splice(leadBookerIndex, 1)[0];
+            groupData.members.unshift(leadBooker);
+
+            // Generate the bookmarklet code
+            const bookmarkletCode = groupData.members.map((member, index) =>
+                "document.getElementById('registrations_" + index + "__RegistrationId').value='" + member.registrationNumber + "';" +
+                "document.getElementById('registrations_" + index + "__PostCode').value='" + member.postcode + "';"
+            ).join('');
+
+            // Update the bookmarklet link
+            document.getElementById('bookmarkletLink_' + groupIndex).href = "javascript:(function()%7B" + encodeURIComponent(bookmarkletCode) + "%7D)()";
+        }
+
+        // Initialize the bookmarklet link with the first member as lead booker
+        window.onload = function() {
+            const groupCount = document.querySelectorAll('[id^="leadBooker_"]').length;
+            for (let i = 1; i <= groupCount; i++) {
+                updateBookmarklet(i);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Group Bookmarklets</h1>
+    <ul>
+        <li>
+            <strong>Group 1</strong>
+            <br>
+            <label for="leadBooker_1">Select Lead Booker:</label>
+            <select id="leadBooker_1" onchange="updateBookmarklet(1)">
+<option value="0" selected>Joe Layzell</option>
+<option value="1">Ciara Phelan</option>
+<option value="2">Aaron Murphy</option>
+<option value="3">Maurita Dumbill</option>
+<option value="4">Alexandra Farrell</option>
+<option value="5">Louise Cross</option>
+            </select>
+            <br>
+            Bookmarklet: <a id="bookmarkletLink_1" href="#">Group 1</a>
+            <script type="application/json" id="groupData_1">
+                {"name":"Group 1","location":"","members":[{"name":"Joe Layzell","registrationNumber":"4112334263","postcode":"M19 3RQ"},{"name":"Ciara Phelan","registrationNumber":"3362618520","postcode":"M19 1AD"},{"name":"Aaron Murphy","registrationNumber":"3555685951","postcode":"M14 7EH"},{"name":"Maurita Dumbill","registrationNumber":"94577619","postcode":"M1 5GL"},{"name":"Alexandra Farrell","registrationNumber":"976647840","postcode":"CW8 1RU"},{"name":"Louise Cross","registrationNumber":"3683123270","postcode":"S11 8RU"}]}
+            </script>
+        </li>
+        <li>
+            <strong>Group 2</strong>
+            <br>
+            <label for="leadBooker_2">Select Lead Booker:</label>
+            <select id="leadBooker_2" onchange="updateBookmarklet(2)">
+<option value="0" selected>Jonathan Welch</option>
+<option value="1">Alex Modelly</option>
+<option value="2">Joshua Porter</option>
+<option value="3">Freddie Talbot</option>
+<option value="4">James McIntyre</option>
+<option value="5">Joshua Martin</option>
+            </select>
+            <br>
+            Bookmarklet: <a id="bookmarkletLink_2" href="#">Group 2</a>
+            <script type="application/json" id="groupData_2">
+                {"name":"Group 2","location":"","members":[{"name":"Jonathan Welch","registrationNumber":"538912787","postcode":"m6 6hx"},{"name":"Alex Modelly","registrationNumber":"3138725091","postcode":"BN3 4GN"},{"name":"Joshua Porter","registrationNumber":"204157992","postcode":"HX7 8LA"},{"name":"Freddie Talbot","registrationNumber":"2450878964","postcode":"M20 4NT"},{"name":"James McIntyre","registrationNumber":"44841202","postcode":"OL4 2NF"},{"name":"Joshua Martin","registrationNumber":"952727357","postcode":"OL7 9SU"}]}
+            </script>
+        </li>
+        <li>
+            <strong>Group 3</strong>
+            <br>
+            <label for="leadBooker_3">Select Lead Booker:</label>
+            <select id="leadBooker_3" onchange="updateBookmarklet(3)">
+<option value="0" selected>Emily Cartwright</option>
+<option value="1">John Jenkinson</option>
+<option value="2">Noah Jenkinson </option>
+<option value="3">Jasmin Jenkinson</option>
+<option value="4">Georgia Richings  </option>
+<option value="5">Gerard McGoldrick</option>
+            </select>
+            <br>
+            Bookmarklet: <a id="bookmarkletLink_3" href="#">Group 3</a>
+            <script type="application/json" id="groupData_3">
+                {"name":"Group 3","location":"","members":[{"name":"Emily Cartwright","registrationNumber":"21694473","postcode":"PR5 8BJ"},{"name":"John Jenkinson","registrationNumber":"2729534946","postcode":"DL2 1QT"},{"name":"Noah Jenkinson ","registrationNumber":"3691393281","postcode":"DL2 1QT"},{"name":"Jasmin Jenkinson","registrationNumber":"83034106","postcode":"DL5 4NF"},{"name":"Georgia Richings  ","registrationNumber":"3213313394","postcode":"OX5 2JA"},{"name":"Gerard McGoldrick","registrationNumber":"2017294182","postcode":"M20 4ZA"}]}
+            </script>
+        </li>
+        <li>
+            <strong>Group 4</strong>
+            <br>
+            <label for="leadBooker_4">Select Lead Booker:</label>
+            <select id="leadBooker_4" onchange="updateBookmarklet(4)">
+<option value="0" selected>Natalie Thurlby</option>
+<option value="1">Stephanie Parr</option>
+<option value="2">Jennifer Parr</option>
+<option value="3">Andrew Parr</option>
+<option value="4">Lorna Barr</option>
+            </select>
+            <br>
+            Bookmarklet: <a id="bookmarkletLink_4" href="#">Group 4</a>
+            <script type="application/json" id="groupData_4">
+                {"name":"Group 4","location":"","members":[{"name":"Natalie Thurlby","registrationNumber":"3663528176","postcode":"BS3 3NE"},{"name":"Stephanie Parr","registrationNumber":"2388214953","postcode":"M298NP"},{"name":"Jennifer Parr","registrationNumber":"260977529","postcode":"WN7 2BP"},{"name":"Andrew Parr","registrationNumber":"2301825713","postcode":"M29 8JF"},{"name":"Lorna Barr","registrationNumber":"3323200836","postcode":"PA200HY"}]}
+            </script>
+        </li>
+        <li>
+            <strong>Group 5</strong>
+            <br>
+            <label for="leadBooker_5">Select Lead Booker:</label>
+            <select id="leadBooker_5" onchange="updateBookmarklet(5)">
+<option value="0" selected>Jack Stokes</option>
+<option value="1">Paul Woods</option>
+<option value="2">Amy McIntosh </option>
+<option value="3">Elliot Stokes</option>
+<option value="4">Mary Gogarty </option>
+<option value="5">Christopher Carthy</option>
+            </select>
+            <br>
+            Bookmarklet: <a id="bookmarkletLink_5" href="#">Group 5</a>
+            <script type="application/json" id="groupData_5">
+                {"name":"Group 5","location":"","members":[{"name":"Jack Stokes","registrationNumber":"2641435803","postcode":"SW16 2UU"},{"name":"Paul Woods","registrationNumber":"2009151391","postcode":"PR30RH"},{"name":"Amy McIntosh ","registrationNumber":"199564536","postcode":"PR30RH"},{"name":"Elliot Stokes","registrationNumber":"336855838","postcode":"SE164SR"},{"name":"Mary Gogarty ","registrationNumber":"41887298","postcode":"M22 4NW"},{"name":"Christopher Carthy","registrationNumber":"4189810426","postcode":"M22 4NW"}]}
+            </script>
+        </li>
+    </ul>
+</body>
+</html>

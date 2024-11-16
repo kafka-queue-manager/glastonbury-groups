@@ -1,0 +1,179 @@
+{
+  "groups": [
+    {
+      "name": "Group 1",
+      "location": "",
+      "members": [
+        {
+          "name": "Joe Layzell",
+          "registrationNumber": "4112334263",
+          "postcode": "M19 3RQ"
+        },
+        {
+          "name": "Ciara Phelan",
+          "registrationNumber": "3362618520",
+          "postcode": "M19 1AD"
+        },
+        {
+          "name": "Aaron Murphy",
+          "registrationNumber": "3555685951",
+          "postcode": "M14 7EH"
+        },
+        {
+          "name": "Maurita Dumbill",
+          "registrationNumber": "94577619",
+          "postcode": "M1 5GL"
+        },
+        {
+          "name": "Alexandra Farrell",
+          "registrationNumber": "976647840",
+          "postcode": "CW8 1RU"
+        },
+        {
+          "name": "Louise Cross",
+          "registrationNumber": "3683123270",
+          "postcode": "S11 8RU"
+        }
+      ]
+    },
+    {
+      "name": "Group 2",
+      "location": "",
+      "members": [
+        {
+          "name": "Jonathan Welch",
+          "registrationNumber": "538912787",
+          "postcode": "m6 6hx"
+        },
+        {
+          "name": "Alex Modelly",
+          "registrationNumber": "3138725091",
+          "postcode": "BN3 4GN"
+        },
+        {
+          "name": "Joshua Porter",
+          "registrationNumber": "204157992",
+          "postcode": "HX7 8LA"
+        },
+        {
+          "name": "Freddie Talbot",
+          "registrationNumber": "2450878964",
+          "postcode": "M20 4NT"
+        },
+        {
+          "name": "James McIntyre",
+          "registrationNumber": "44841202",
+          "postcode": "OL4 2NF"
+        },
+        {
+          "name": "Joshua Martin",
+          "registrationNumber": "952727357",
+          "postcode": "OL7 9SU"
+        }
+      ]
+    },
+    {
+      "name": "Group 3",
+      "location": "",
+      "members": [
+        {
+          "name": "Emily Cartwright",
+          "registrationNumber": "21694473",
+          "postcode": "PR5 8BJ"
+        },
+        {
+          "name": "John Jenkinson",
+          "registrationNumber": "2729534946",
+          "postcode": "DL2 1QT"
+        },
+        {
+          "name": "Noah Jenkinson ",
+          "registrationNumber": "3691393281",
+          "postcode": "DL2 1QT"
+        },
+        {
+          "name": "Jasmin Jenkinson",
+          "registrationNumber": "83034106",
+          "postcode": "DL5 4NF"
+        },
+        {
+          "name": "Georgia Richings  ",
+          "registrationNumber": "3213313394",
+          "postcode": "OX5 2JA"
+        },
+        {
+          "name": "Gerard McGoldrick",
+          "registrationNumber": "2017294182",
+          "postcode": "M20 4ZA"
+        }
+      ]
+    },
+    {
+      "name": "Group 4",
+      "location": "",
+      "members": [
+        {
+          "name": "Natalie Thurlby",
+          "registrationNumber": "3663528176",
+          "postcode": "BS3 3NE"
+        },
+        {
+          "name": "Stephanie Parr",
+          "registrationNumber": "2388214953",
+          "postcode": "M298NP"
+        },
+        {
+          "name": "Jennifer Parr",
+          "registrationNumber": "260977529",
+          "postcode": "WN7 2BP"
+        },
+        {
+          "name": "Andrew Parr",
+          "registrationNumber": "2301825713",
+          "postcode": "M29 8JF"
+        },
+        {
+          "name": "Lorna Barr",
+          "registrationNumber": "3323200836",
+          "postcode": "PA200HY"
+        }
+      ]
+    },
+    {
+      "name": "Group 5",
+      "location": "",
+      "members": [
+        {
+          "name": "Jack Stokes",
+          "registrationNumber": "2641435803",
+          "postcode": "SW16 2UU"
+        },
+        {
+          "name": "Paul Woods",
+          "registrationNumber": "2009151391",
+          "postcode": "PR30RH"
+        },
+        {
+          "name": "Amy McIntosh ",
+          "registrationNumber": "199564536",
+          "postcode": "PR30RH"
+        },
+        {
+          "name": "Elliot Stokes",
+          "registrationNumber": "336855838",
+          "postcode": "SE164SR"
+        },
+        {
+          "name": "Mary Gogarty ",
+          "registrationNumber": "41887298",
+          "postcode": "M22 4NW"
+        },
+        {
+          "name": "Christopher Carthy",
+          "registrationNumber": "4189810426",
+          "postcode": "M22 4NW"
+        }
+      ]
+    }
+  ]
+}
